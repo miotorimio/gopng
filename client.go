@@ -49,7 +49,7 @@ func (c *QuickChartClient) GenerateChart(config ChartConfig, width, height int) 
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode != http.StatusOK { // Исправлено StartCode
+	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("status: %d", resp.StatusCode)
 	}
 
